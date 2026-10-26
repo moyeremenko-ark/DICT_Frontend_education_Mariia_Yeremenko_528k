@@ -1,17 +1,354 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Homepage | Department of Information and  Communication Technologies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | Department of Information and Communication Technologies</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>Вітаємо на сайті кафедри Інформаційних і коммунікаційних технологій ім. О.О.Зеленського!</h1>
-<p>Це перший тестовий варіант нашого навчального проекту.</p>
-<img src="images/logo.svg" alt="Логотип кафедри"> <script src="js/main.js"></script>
 
+<!-- Верхній колонтитул (Header) -->
+<header class="site-header">
+    <div class="header-container">
+        <!-- Логотип -->
+        <div class="header-branding">
+            <a href="https://dict.khai.edu/uk">
+                <img src="https://dict.khai.edu/themes/custom/dict_localgov/logo.svg"
+                     alt="Офіційний логотип кафедри ІКТ ХАІ"
+                     title="Перейти на головну сторінку Кафедри ІКТ"
+                     class="site-logo">
+            </a>
+        </div>
+
+        <!-- Головне меню навігації -->
+        <nav class="header-nav">
+            <ul class="nav-menu">
+                <li><a href="https://dict.khai.edu/uk/spetsialnosti">Спеціальності</a></li>
+                <li><a href="https://dict.khai.edu/uk/novyny">Новини</a></li>
+                <li><a href="https://dict.khai.edu/uk/kolektyv">Колектив</a></li>
+                <li><a href="https://dict.khai.edu/uk/chasti-zapytannya">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <!-- Пошук та перемикач мови -->
+        <div class="header-actions">
+            <!-- Пошукова форма -->
+            <form action="https://dict.khai.edu/uk/search" method="get" class="search-form">
+                <input type="text" name="search_api_fulltext" placeholder="Search" class="search-input">
+                <button type="submit" aria-label="Search" class="search-btn">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Перемикач мови -->
+            <div class="lang-switcher">
+                <a href="https://dict.khai.edu/en" class="lang-link">EN</a>
+                <span class="lang-divider">/</span>
+                <a href="https://dict.khai.edu/uk" class="lang-link active">UA</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <!-- Головна секція (Hero) -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Створюй майбутнє.<br>Тут і зараз!</h1>
+            <p>
+                Вибери не просто освіту — обери шлях до свого технологічного майбутнього!
+                Кафедра Інформаційно-комунікаційних технологій імені О.О. Зеленського
+                Національного аерокосмічного університету "ХАІ" — це місце, де ідеї стають реальністю,
+                а знання відкривають двері до кар'єри мрії. Почни свій шлях вже сьогодні!
+            </p>
+
+            <a class="btn" href="https://dict.khai.edu/uk/form/2026-undergraduate-admissions" target="_blank">Хочу поступити</a>
+        </div>
+        <div class="hero-image">
+            <div class="arch-bg">
+                <img src="https://dict.khai.edu/sites/default/files/2026-03/Man.png"
+                     alt="Студент кафедри ІКТ ХАІ з ноутбуком"
+                     title="Приєднуйся до команди студентів ІКТ ХАІ!">
+            </div>
+        </div>
+    </section>
+
+    <!-- Секція спеціальностей -->
+    <section class="specialties">
+        <h2>Наші спеціальності</h2>
+        <p class="specialties-desc">
+            Ми спеціалізуємось на підготовці фахівців галузі інформаційних технологій, електронних комунікацій та інфокомунікаційних систем за напрямками "Інжиніринг і програмування інфокомунікаційних систем" (освітньо-професійна програма), "Штучний інтелект та інформаційні системи" (освітньо-професійна програма), "Інформаційні мережі звʼязку" (освітньо-професійна програма) та "Інформаційні мережі звʼязку" (освітньо-наукова програма).
+        </p>
+
+        <div class="cards">
+            <a class="card" href="https://dict.khai.edu/uk/spetsialnosti" target="_blank">
+                <h3>G5</h3>
+                <span class="level">бакалаврський рівень</span>
+                <p>«Інжиніринг і програмування інфокомунікаційних систем»</p>
+            </a>
+
+            <a class="card" href="https://dict.khai.edu/uk/spetsialnosti" target="_blank">
+                <h3>F6</h3>
+                <span class="level">бакалаврський рівень</span>
+                <p>«Штучний інтелект та інформаційні системи»</p>
+            </a>
+
+            <a class="card" href="https://dict.khai.edu/uk/spetsialnosti" target="_blank">
+                <h3>G5</h3>
+                <span class="level">магістерський рівень</span>
+                <p>«Інформаційні мережі звʼязку (освітньо-професійна програма)»</p>
+            </a>
+
+            <a class="card" href="https://dict.khai.edu/uk/spetsialnosti" target="_blank">
+                <h3>G5</h3>
+                <span class="level">магістерський рівень</span>
+                <p>«Інформаційні мережі звʼязку" (освітньо-наукова програма)»</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Розділ "Нам довіряють" -->
+    <section class="trust">
+        <h2>Нам довіряють</h2>
+        <div class="partners-logos">
+            <img src="https://dict.khai.edu/sites/default/files/2026-03/Logos%20%284%29.png" alt="Логотип IT-компанії SoftServe" title="SoftServe">
+            <img src="https://dict.khai.edu/sites/default/files/2026-03/Logos%20%285%29.png" alt="Логотип IT-компанії DataArt" title="DataArt">
+            <img src="https://dict.khai.edu/sites/default/files/2026-03/Logos%20%282%29.png" alt="Логотип IT-компанії GlobalLogic" title="GlobalLogic">
+            <img src="https://dict.khai.edu/sites/default/files/2026-03/Logos%20%283%29.png" alt="Логотип IT-компанії EPAM" title="EPAM Systems">
+            <img src="https://dict.khai.edu/sites/default/files/2026-03/Logos.png" alt="Логотип IT-компанії NIX Solutions" title="NIX Solutions">
+            <img src="https://dict.khai.edu/sites/default/files/2026-03/Logos%20%281%29.png" alt="Логотип IT-компанії Sigma Software" title="Sigma Software">
+        </div>
+    </section>
+
+    <!-- Розділ "Якщо в числах" -->
+    <section class="statistics">
+        <h2>Якщо в числах</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">18</span>
+                <p>Досвідчених викладачів</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">65</span>
+                <p>Навчальних дисциплін</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">1&nbsp;200+</span>
+                <p>Талановитих випускників</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">∞</span>
+                <p>Унікального досвіду</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Розділ "Контакти" -->
+    <section class="contacts-section">
+        <div class="contacts-container">
+            <h2>Контакти</h2>
+            <ul class="contacts-list">
+                <!-- Телефон -->
+                <li class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-text">
+                        <a href="tel:+380968088684" class="contact-link">+38 (096) 808-86-84</a>
+                        <span class="contact-subtext">Понеділок - П'ятниця 9:00 - 17:00</span>
+                    </div>
+                </li>
+
+                <!-- Email -->
+                <li class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-text">
+                        <a href="mailto:dict@khai.edu" class="contact-link">dict@khai.edu</a>
+                    </div>
+                </li>
+
+                <!-- Telegram -->
+                <li class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-text">
+                        <a href="https://t.me/dict_504_khai" target="_blank" class="contact-link">@DICT_504_KHAI</a>
+                    </div>
+                </li>
+
+                <!-- Facebook -->
+                <li class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.5C10 7.01 11.49 5.65 13.75 5.65c1.08 0 2.21.19 2.21.19v2.43h-1.25c-1.23 0-1.61.77-1.61 1.56V12h2.74l-.44 3h-2.3v6.8c4.56-.93 8-4.96 8-9.8z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-text">
+                        <a href="https://www.facebook.com/dept.khai.7" target="_blank" class="contact-link">Dept InfoComm Techs</a>
+                    </div>
+                </li>
+
+                <!-- Instagram -->
+                <li class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-text">
+                        <a href="https://www.instagram.com/dict.khai/?hl=uk" target="_blank" class="contact-link">DICT.KHAI</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Розділ "Новини" -->
+    <section class="news-section">
+        <h2>Новини</h2>
+
+        <div class="news-grid">
+            <!-- Картка 1 -->
+            <article class="news-card">
+                <a href="https://dict.khai.edu/uk/novyny/2026/zaviduvach-kafedry-volodymyr-lukin-uviyshov-do-5-naykrashchykh-uchenykh-svitu" target="_blank" class="news-link">
+                    <div class="news-media">
+                        <img src="https://dict.khai.edu/sites/default/files/styles/manual_8_7_crop/public/2026-08/763028438_1401709465107496_2507995724464301616_n.jpeg"
+                             alt="Фото Володимира Лукіна"
+                             title="Завідувач кафедри Володимир Лукін увійшов до 5% найкращих учених світу">
+                    </div>
+                    <div class="news-content">
+                        <h3>Завідувач кафедри Володимир Лукін увійшов до 5% найкращих учених світу</h3>
+                        <p>Професор, завідувач кафедри інформаційно-комунікаційних технологій ім. О.О. Зеленського Володимир Лукін увійшов до категорії World's Top 5% Scientists за результатами міжнародного рейтингу SciRank Global 2025.</p>
+                    </div>
+                    <time datetime="2026-08-30">30 August 2026</time>
+                </a>
+            </article>
+
+            <!-- Картка 2 -->
+            <article class="news-card">
+                <a href="https://dict.khai.edu/uk/novyny/2026/vykladachi-kafedry-vzyaly-uchast-u-mizhnarodniy-konferentsiyi-mmar-2026" target="_blank" class="news-link">
+                    <div class="news-media">
+                        <img src="https://dict.khai.edu/sites/default/files/styles/manual_8_7_crop/public/2026-08/MMAR-2026-CfP.png"
+                             alt="Афіша міжнародної конференції MMAR 2026"
+                             title="Викладачі кафедри взяли участь у міжнародній конференції MMAR 2026">
+                    </div>
+                    <div class="news-content">
+                        <h3>Викладачі кафедри взяли участь у міжнародній конференції MMAR 2026</h3>
+                        <p>У Польщі відбулася міжнародна конференція MMAR 2026, у якій взяли участь співробітники кафедри з доповідями, присвяченими автоматизації обробки терагерцових зображень та стисненню даних LiDAR.</p>
+                    </div>
+                    <time datetime="2026-08-21">21 August 2026</time>
+                </a>
+            </article>
+
+            <!-- Картка 3 -->
+            <article class="news-card">
+                <a href="https://dict.khai.edu/uk/novyny/2026/vitayemo-raeda-al-senaykha-iz-uspishnym-zakhystom-dysertatsiyi" target="_blank" class="news-link">
+                    <div class="news-media">
+                        <img src="https://dict.khai.edu/sites/default/files/styles/manual_8_7_crop/public/2026-08/photo_2026-08-24%2011.05.09.jpeg"
+                             alt="Фото Раеда Аль-Сенайха під час захисту дисертації"
+                             title="Вітаємо Раеда Аль-Сенайха із успішним захистом дисертації">
+                    </div>
+                    <div class="news-content">
+                        <h3>Вітаємо Раеда Аль-Сенайха із успішним захистом дисертації</h3>
+                        <p>Аспірант кафедри інформаційно-комунікаційних технологій ім. О.О. Зеленського Раед Аль-Сенайх успішно захистив дисертацію на здобуття ступеня доктора філософії за спеціальністю 172 «Телекомунікації та радіотехніка».</p>
+                    </div>
+                    <time datetime="2026-08-17">17 August 2026</time>
+                </a>
+            </article>
+
+            <!-- Картка 4 -->
+            <article class="news-card">
+                <a href="https://dict.khai.edu/uk/novyny/2026/profesor-volodymyr-lukin-stav-redaktorom-mizhnarodnoyi-naukovoyi-monohrafiyi-z" target="_blank" class="news-link">
+                    <div class="news-media">
+                        <img src="https://dict.khai.edu/sites/default/files/styles/manual_8_7_crop/public/2026-07/1783602777024.jpeg"
+                             alt="Обкладинка наукової монографії з комп'ютерного зору"
+                             title="Професор Володимир Лукін став редактором міжнародної наукової монографії">
+                    </div>
+                    <div class="news-content">
+                        <h3>Професор Володимир Лукін став редактором міжнародної наукової монографії з комп'ютерного зору та інтелектуальних систем</h3>
+                        <p>У видавництві Scientific Route OÜ вийшла друком міжнародна колективна монографія "Pattern Recognition in Surveillance Systems and Diagnostics", редактором якої виступив завідувач кафедри інформаційно-комунікаційних технологій ім. О.О. Зеленського Національного аерокосмічного університету «ХАІ», професор Володимир Васильович Лукін.</p>
+                    </div>
+                    <time datetime="2026-07-11">11 July 2026</time>
+                </a>
+            </article>
+        </div>
+
+        <!-- Кнопка переходу -->
+        <div class="news-btn-wrapper">
+            <a href="https://dict.khai.edu/uk/novyny" target="_blank" class="btn">НОВИНИ</a>
+        </div>
+    </section>
+
+    <!-- Посилання на відео -->
+    <div class="video-container">
+        <video autoplay muted loop playsinline class="news-video">
+            <source src="video/NAU.mp4" type="video/mp4">
+            Ваш браузер не підтримує тег video.
+        </video>
+    </div>
+
+    <!-- Розділ відгуків випускників -->
+    <section class="reviews-section">
+        <h2>Відгуки випускників</h2>
+
+        <!-- Аудіовідгук -->
+        <div class="audio-player-wrapper">
+            <p class="audio-label">Голосовий відгук випускника:</p>
+            <audio controls class="custom-audio">
+                <source src="audio/audio_1.ogg" type="audio/ogg">
+                Ваш браузер не підтримує аудіоелемент.
+            </audio>
+
+            <audio controls class="custom-audio">
+                <source src="audio/audio_2.ogg" type="audio/ogg">
+                Ваш браузер не підтримує аудіоелемент.
+            </audio>
+        </div>
+    </section>
+</main>
+
+<!-- Нижній колонтитул (Footer) -->
+<footer>
+    <div class="container footer-content">
+        <div class="footer-addr">
+            <p>
+                61070, Харків, вул. Вадима Манька, 17<br>
+                НАУ "ХАІ"<br>
+                Кафедра інформаційно-комунікаційних технологій №504
+            </p>
+        </div>
+
+        <div class="footer-logo">
+            <a href="https://dict.khai.edu/uk">
+                <img src="https://dict.khai.edu/themes/custom/dict_localgov/logo.svg"
+                     alt="Логотип кафедри ІКТ ХАІ"
+                     title="На головну сторінку Кафедри ІКТ"
+                     width="120">
+            </a>
+        </div>
+
+        <div class="footer-contacts">
+            <p><strong>Контакти:</strong></p>
+            <p>Тел: <a href="tel:+380968088684">+38 (096) 808-86-84</a></p>
+            <p>Email: <a href="mailto:dict@khai.edu">dict@khai.edu</a></p>
+            <p>Telegram: <a href="https://t.me/dict_504_khai" target="_blank">@DICT_504_KHAI</a></p>
+            <p>Facebook: <a href="https://www.facebook.com/dept.khai.7" target="_blank">Dept InfoComm Techs</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/dict.khai/?hl=uk" target="_blank">DICT.KHAI</a></p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
