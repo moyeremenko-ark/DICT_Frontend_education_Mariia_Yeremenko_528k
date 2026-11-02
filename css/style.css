@@ -1,8 +1,683 @@
+/* ==========================================
+   Верхній колонтитул (Header)
+   ========================================== */
+.site-header {
+    background-color: #121212;
+    border-bottom: 1px solid #222222;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 16px 0;
+}
+
+.header-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Логотип */
+.site-logo {
+    height: 38px;
+    width: auto;
+    display: block;
+}
+
+/* Навігація */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: #ff3333;
+}
+
+/* Пошук та мови */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Форма пошуку */
+.search-form {
+    display: flex;
+    align-items: center;
+    background-color: #1f1f1f;
+    border: 1px solid #333333;
+    border-radius: 20px;
+    padding: 5px 14px;
+    transition: border-color 0.2s;
+}
+
+.search-form:focus-within {
+    border-color: #ff3333;
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 0.85rem;
+    outline: none;
+    width: 100px;
+}
+
+.search-input::placeholder {
+    color: #777777;
+}
+
+.search-btn {
+    background: transparent;
+    border: none;
+    color: #aaaaaa;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.search-btn:hover {
+    color: #ff3333;
+}
+
+/* Перемикач мови */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.lang-link {
+    color: #777777;
+    transition: color 0.2s;
+}
+
+.lang-link:hover {
+    color: #ffffff;
+}
+
+.lang-link.active {
+    color: #ff3333;
+}
+
+.lang-divider {
+    color: #444444;
+}
+
+
+
+/* ==========================================
+   Стандартні відступи та базові налаштування
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #8E8E8E;
-    color: #FFF;
-    max-width: 1280px;
-    margin: 50px auto;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+/* ==========================================
+   Головна секція (Hero)
+   ========================================== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    color: #aaaaaa;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+/* Червона кнопка */
+.btn {
+    display: inline-block;
+    background-color: #ff3333;
+    color: #ffffff !important;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #e62e2e;
+    transform: translateY(-2px);
+}
+
+
+
+/* ==========================================
+   Секція спеціальностей
+   ========================================== */
+.specialties {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.specialties h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.specialties-desc {
+    color: #aaaaaa;
+    max-width: 750px;
+    margin: 0 auto 40px;
+    font-size: 0.95rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    padding: 40px 30px;
+    position: relative;
+    display: block;
+    transition: border-color 0.3s, transform 0.2s;
+}
+
+.card:hover {
+    border-color: #555;
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.card p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+/* Стрілочка в кутку картки */
+.card::after {
+    content: '↗';
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 2rem;
+    color: #444;
+    transition: color 0.2s;
+}
+
+.card:hover::after {
+    color: #ff3333;
+}
+
+
+
+/* ==========================================
+   Розділ "Нам довіряють"
+   ========================================== */
+.trust {
+    background-color: #2d2d2d;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.trust h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px 45px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.partners-logos img {
+    max-height: 40px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0.7) opacity(0.85);
+    transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+.partners-logos img:hover {
+    filter: brightness(1) opacity(1);
+    transform: translateY(-2px);
+}
+
+
+
+/* ==========================================
+   Розділ "Якщо в числах"
+   ========================================== */
+.statistics {
+    padding: 60px 0;
+}
+
+.statistics h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    position: relative;
+    padding: 10px 0;
+}
+
+/* Червоні вертикальні лінії-розділювачі між блоками */
+.stat-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background-color: #ff3333;
+    opacity: 0.3;
+}
+
+.stat-number {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.stat-item p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.3;
+    margin: 0;
+}
+
+
+
+/* ==========================================
+   Розділ "Контакти"
+   ========================================== */
+.contacts-section {
+    background-color: #ffffff;
+    color: #121212;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 60px 0;
+    box-sizing: border-box;
+}
+
+.contacts-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contacts-section h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 35px;
+    color: #121212;
+}
+
+.contacts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.contact-icon {
+    width: 42px;
+    height: 42px;
+    background-color: #262626;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-link {
+    color: #121212 !important;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.contact-link:hover {
+    color: #ff3333 !important;
+}
+
+.contact-subtext {
+    color: #666666;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+
+
+/* ==========================================
+   Розділ "Новини"
+   ========================================== */
+.news-section {
+    padding: 60px 0;
+}
+
+.news-section h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 15px;
+    position: relative;
+}
+
+/* Вертикальні лінії між картками новин */
+.news-card:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.news-media img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.news-content h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.35;
+    margin-bottom: 14px;
+}
+
+.news-content p {
+    font-size: 0.85rem;
+    color: #cccccc;
+    line-height: 1.45;
+    margin-bottom: 20px;
+}
+
+.news-card time {
+    display: block;
+    text-align: right;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: auto;
+}
+
+.news-btn-wrapper {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.news-link {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.news-link:hover .news-content h3 {
+    color: #ff3333;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Співвідношення сторін 16:9 */
+    height: 0;
+    margin: 30px 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.news-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: cover;
+}
+
+.audio-player-wrapper {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
     padding: 20px;
+    margin-top: 30px;
+    max-width: 500px;
+}
+
+.audio-label {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.custom-audio {
+    width: 100%;
+    border-radius: 8px;
+    outline: none;
+}
+
+
+
+/* ==========================================
+   Нижній колонтитул (Footer)
+   ========================================== */
+footer {
+    background-color: #0a0a0a;
+    border-top: 1px solid #222;
+    padding: 40px 0;
+    margin-top: 60px;
+    color: #888888;
+    font-size: 0.85rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-addr p {
+    color: #aaaaaa;
+}
+
+.footer-contacts a {
+    color: #ff3333 !important;
+    transition: text-decoration 0.2s;
+}
+
+.footer-contacts a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Адаптивність для мобільних екранів */
+@media (max-width: 600px) {
+    .header-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .partners-logos {
+        gap: 25px 30px;
+    }
+
+    .partners-logos img {
+        max-height: 35px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .news-card:not(:last-child)::after {
+        display: none;
+    }
 }
