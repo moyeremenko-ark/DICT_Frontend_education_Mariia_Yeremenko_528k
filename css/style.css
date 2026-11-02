@@ -7,7 +7,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 16px 0;
+    padding: 20px 0;
 }
 
 .header-container {
@@ -98,6 +98,10 @@
     color: #ff3333;
 }
 
+section {
+    margin: 40px 0;
+}
+
 /* Перемикач мови */
 .lang-switcher {
     display: flex;
@@ -154,12 +158,17 @@ img {
     display: block;
 }
 
-.container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+/*.container {*/
+/*    max-width: 1140px;*/
+/*    margin: 0 auto;*/
+/*    padding: 0 20px;*/
+/*}*/
 
+.container {
+    max-width: 80em;
+    margin: 0 auto;
+    padding: 0 16px;
+}
 
 
 /* ==========================================
@@ -241,11 +250,21 @@ img {
     text-align: left;
 }
 
+/*.card {*/
+/*    background-color: #1a1a1a;*/
+/*    border: 1px solid #2a2a2a;*/
+/*    border-radius: 16px;*/
+/*    padding: 40px 30px;*/
+/*    position: relative;*/
+/*    display: block;*/
+/*    transition: border-color 0.3s, transform 0.2s;*/
+/*}*/
+
 .card {
     background-color: #1a1a1a;
-    border: 1px solid #2a2a2a;
-    border-radius: 16px;
-    padding: 40px 30px;
+    border: 1px solid #8E8E8E;
+    border-radius: 20px;
+    padding: 20px;
     position: relative;
     display: block;
     transition: border-color 0.3s, transform 0.2s;
@@ -357,19 +376,23 @@ img {
 .stat-item {
     text-align: center;
     position: relative;
-    padding: 10px 0;
+    padding: 10px;
 }
 
 /* Червоні вертикальні лінії-розділювачі між блоками */
-.stat-item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 15%;
-    height: 70%;
-    width: 1px;
-    background-color: #ff3333;
-    opacity: 0.3;
+/*.stat-item:not(:last-child)::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    right: 0;*/
+/*    top: 15%;*/
+/*    height: 70%;*/
+/*    width: 1px;*/
+/*    background-color: #ff3333;*/
+/*    opacity: 0.3;*/
+/*}*/
+
+.stat-item:not(:last-child) {
+    border-left: 1px solid #FF3A3A;
 }
 
 .stat-number {
@@ -503,14 +526,18 @@ img {
 }
 
 /* Вертикальні лінії між картками новин */
-.news-card:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background-color: rgba(255, 255, 255, 0.15);
+/*.news-card:not(:last-child)::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    right: 0;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*    width: 1px;*/
+/*    background-color: rgba(255, 255, 255, 0.15);*/
+/*}*/
+
+.news-card:not(:last-child) {
+    border-left: 1px solid #FF3A3A;
 }
 
 .news-media img {
@@ -519,6 +546,10 @@ img {
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 20px;
+}
+
+.news-content {
+    padding: 10px;
 }
 
 .news-content h3 {
@@ -566,7 +597,7 @@ img {
 .video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* Співвідношення сторін 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     margin: 30px 0;
     border-radius: 12px;
@@ -606,6 +637,13 @@ img {
     outline: none;
 }
 
+.review-card {
+    background-color: #1a1a1a;
+    border: 1px solid #8E8E8E;
+    border-radius: 20px;
+    padding: 20px;
+}
+
 
 
 /* ==========================================
@@ -615,7 +653,7 @@ footer {
     background-color: #0a0a0a;
     border-top: 1px solid #222;
     padding: 40px 0;
-    margin-top: 60px;
+    margin-top: 40px;
     color: #888888;
     font-size: 0.85rem;
 }
@@ -677,7 +715,7 @@ footer {
         gap: 30px;
     }
 
-    .news-card:not(:last-child)::after {
-        display: none;
+    .news-card:not(:last-child) {
+        border-left: none;
     }
 }
